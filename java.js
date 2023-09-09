@@ -20,7 +20,9 @@ btnModal.addEventListener('mouseover', () => {
  
 
 const modal = document.createElement('div')
-const modalWindow = document.createElement('div')
+const modalWindow = document.createElement('div') 
+ modalWindow.style.backgroundColor = 'red';
+ modalWindow.style.backgroundColor = 'green';
 modal.style.cssText = `
 position: fixed;
    top: 0;
@@ -85,7 +87,7 @@ btnOpen.textContent = 'ACCERT'
 modalWindow.append(btnOpen)
 
 btnOpen.style.cssText = `
-position: absolute;
+   position: absolute;
    left: 24px;
    top:156px;
    background-color: green;
@@ -112,42 +114,16 @@ position: absolute;
    font-size: 12px;
    cursor: pointer;`
 
-   btnOpen11.addEventListener('click', () =>{
-    modal.remove(modal)
+   btnOpen.addEventListener('click', () =>{
+    modalWindow.style.backgroundColor = 'red';
+    btnClose.style.backgroundColor = 'red';
+
 })
-btnOpen.addEventListener('click', () =>{
-    modal.remove(modal)
+btnOpen11.addEventListener('click', () =>{
+    modalWindow.style.backgroundColor = 'green';
+    btnClose.style.backgroundColor = 'green';
 })
 
 
 const message = prompt('HELLO! What is your name?')
 alert (`${message} welcome to my web-page🙃😉`)
-
-// const NEXT = document.getElementById('next')
-// const text11 = document.createElement('div')
-// const text = document.createElement('div')
-
-// // text11.style.cssText = `
-// // width: 800px;
-// //    height:600px;
-// //    background-color: rgb(236,179,54);
-// //    position: fixed;
-// //    top: 50%;
-// //    left: 50%;
-// //    transform: translate(-50%, -50%);
-// //    padding: 20px;
-// //    font-size: 18px;
-// //    color: black;
-// //    border-radius:10%;
-// //    border-color:gray;
-
-// // `
-
-// btnOpen.append(NEXT)
-// text11.append(text)
-
-// btnOpen.addEventListener('click', () =>{
-//     NEXT.append(text11)
-// })
-
-

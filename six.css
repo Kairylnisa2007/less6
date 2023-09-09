@@ -6,10 +6,10 @@
 }
 body{
     background: rgb(236,179,54);
-background: radial-gradient(circle, rgba(236,179,54,1) 83%, rgba(107,71,84,0.9950105042016807) 100%);
-color: aliceblue;
-text-align: center;
-font-family: "Poppins", Arial;
+    background: radial-gradient(circle, rgba(236,179,54,1) 83%, rgba(107,71,84,0.9950105042016807) 100%);
+    color: aliceblue;
+    text-align: center;
+    font-family: "Poppins", Arial;
 }
 .text{
     font-size: 20px;
@@ -52,6 +52,6 @@ h2:hover{
     color: white;
 }
 #root:hover{
-box-shadow: 0 0 5px #0f0f0f;
-color: aliceblue;
+    box-shadow: 0 0 5px #0f0f0f;
+    color: aliceblue;
 }
