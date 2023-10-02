@@ -1,8 +1,9 @@
+const body = document.getElementsByName('body')
 const ROOT = document.getElementById('root')
 
 const btnModal = document.createElement('button')
 ROOT.append(btnModal)
-btnModal.textContent = 'SHOW MODAL'
+btnModal.textContent = 'меняй цвет задного фона'
 
 btnModal.style.cssText = `
 background-color: azure;
@@ -12,12 +13,11 @@ background-color: azure;
     border-radius: 10px;
     width: 150px;
     height: 50px;
-`;
 
+`;
 btnModal.addEventListener('mouseover', () => {
     btnModal.style.backgroundColor = '#00000070'
 })
- 
 
 const modal = document.createElement('div')
 const modalWindow = document.createElement('div') 
@@ -32,11 +32,11 @@ position: fixed;
    background-color: #00000060;
    display: flex;
    align-items: center;
-   justify-content: center;`
+   justify-content: center;
+   cursor: unset;`
 
 
 modalWindow.style.cssText = `
- 
 
    width: 400px;
    height:200px;
@@ -51,8 +51,6 @@ modalWindow.style.cssText = `
    border-radius:8px;
    border-color:gray;
    `
-
-   
 modalWindow.textContent = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe omnis, impedit aliquid enim fugit dicta natus provident aut incidunt optio, facilis dolor pariatur aspernatur maxime consequatur neque voluptatum obcaecati nemo!
 `
 modal.append(modalWindow)
@@ -60,7 +58,6 @@ modal.append(modalWindow)
 btnModal.addEventListener('click', () =>{
     ROOT.append(modal)
 })
-
 
 const btnClose = document.createElement('button')
 btnClose.textContent = 'x'
@@ -81,9 +78,14 @@ modalWindow.append(btnClose)
 btnClose.addEventListener('click', () =>{
     modal.remove(modal)
 })
+modal.addEventListener('click', (event) => {
+if(event.target === modal){
+    modal.remove
+}
+})
 
 const btnOpen = document.createElement('button')
-btnOpen.textContent = 'ACCERT'
+btnOpen.textContent = 'красный'
 modalWindow.append(btnOpen)
 
 btnOpen.style.cssText = `
@@ -99,7 +101,7 @@ btnOpen.style.cssText = `
    cursor: pointer;`
 
    const btnOpen11 = document.createElement('button')
-btnOpen11.textContent = 'DECLINE'
+btnOpen11.textContent = 'зеленый'
 modalWindow.append(btnOpen11)
 
 btnOpen11.style.cssText = `
@@ -114,16 +116,36 @@ position: absolute;
    font-size: 12px;
    cursor: pointer;`
 
+   const btnOpen12 = document.createElement('button')
+btnOpen12.textContent = 'синий'
+modalWindow.append(btnOpen12)
+
+btnOpen12.style.cssText = `
+position: absolute;
+   left:178px;
+   top:156px;
+   background-color:blue;
+   color:white;
+   border-radius:8px;
+   width: 72px;
+   height: 27px;
+   font-size: 12px;
+   cursor: pointer;`
+
    btnOpen.addEventListener('click', () =>{
-    modalWindow.style.backgroundColor = 'red';
-    btnClose.style.backgroundColor = 'red';
+    modalWindow.style.backgroundColor = 'green';
+    btnClose.style.backgroundColor = 'green';
+    btnModal.style.backgroundColor = 'green';
 
 })
 btnOpen11.addEventListener('click', () =>{
-    modalWindow.style.backgroundColor = 'green';
-    btnClose.style.backgroundColor = 'green';
+    modalWindow.style.backgroundColor = 'red';
+    btnClose.style.backgroundColor = 'red';
+    btnModal.style.backgroundColor = 'red';
 })
-
-
-const message = prompt('HELLO! What is your name?')
-alert (`${message} welcome to my web-page🙃😉`)
+btnOpen12.addEventListener('click', () =>{
+    modalWindow.style.backgroundColor = 'blue';
+    btnClose.style.backgroundColor = 'blue';
+    btnModal.style.backgroundColor = 'blue';
+  
+})

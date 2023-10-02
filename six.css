@@ -10,48 +10,5 @@ body{
     color: aliceblue;
     text-align: center;
     font-family: "Poppins", Arial;
-}
-.text{
-    font-size: 20px;
-    width: 300px;
-    margin: auto 0;
-    
-}
-.image{
-    display: flex;
-    width: 300px;
-    height: 300px;
-    margin-top: 50px;
-    border-radius: 20px;
-    gap: 160px;
-    margin-left: 260px;
-    border: none;
-    border-color: black;
-    
-}
-.image:hover{
-    box-shadow: 0 0   15px;
-    color: #0f0f0f;
-}
-
-.ptex{
-   display: flex;
-   color: black;
-   font-style: italic;
-   gap: 417px;
-   margin-left: 260px;
-
-
-}
-h3:hover{
-    text-shadow: 0 0 5px #0f0f0f;
-    color: white;
-}
-h2:hover{
-    text-shadow: 0 0 5px #0f0f0f;
-    color: white;
-}
-#root:hover{
-    box-shadow: 0 0 5px #0f0f0f;
-    color: aliceblue;
+   
 }
