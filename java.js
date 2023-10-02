@@ -3,7 +3,7 @@ const ROOT = document.getElementById('root')
 
 const btnModal = document.createElement('button')
 ROOT.append(btnModal)
-btnModal.textContent = 'меняй цвет задного фона'
+btnModal.textContent = 'меняй цвет фона'
 
 btnModal.style.cssText = `
 background-color: azure;
